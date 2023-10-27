@@ -1,19 +1,35 @@
-var texte=document.querySelector('p')
-var gras= document.querySelector('#gras')
-gras.addEventListener("click", ()=>{
-  texte.style.fontWeight="bold"
+var gras = document.querySelector('button:first-child')
+var italic = document.querySelector('button:nth-child(2)')
+var underline = document.querySelector('button:nth-child(3)')
+var clear = document.querySelector('button:last-child')
+var p = document.querySelector('p')
+
+gras.addEventListener('click', () => {
+    if (p.style.fontWeight == 'bold') {
+        p.style.fontWeight = 'normal'
+    }  else {
+        p.style.fontWeight = 'bold'
+    }
 })
-var italic= document.querySelector('#italic')
-italic.addEventListener("click", ()=>{
-  texte.style.fontStyle="italic"
+
+italic.addEventListener('click', () => {
+    if (p.style.fontStyle == 'italic') {
+        p.style.fontStyle = 'normal'
+    }  else {
+        p.style.fontStyle = 'italic'
+    }
 })
-var surligne= document.querySelector('#surligne')
-surligne.addEventListener("click", ()=>{
-  texte.style.textDecoration="underline"
+
+underline.addEventListener('click', () => {
+    if (p.style.textDecoration == 'underline') {
+        p.style.textDecoration = 'none'
+    }  else {
+        p.style.textDecoration = 'underline'
+    }
 })
-var clear= document.querySelector('#clear')
-clear.addEventListener("click", ()=>{
-  texte.style.textDecoration=""
-  texte.style.fontWeight=""
-  texte.style.fontStyle=""
+clear.addEventListener('click', () => {
+        p.style.textDecoration = 'none'
+        p.style.fontStyle = 'normal' 
+        p.style.fontWeight = 'normal' 
+
 })
